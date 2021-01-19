@@ -1,0 +1,91 @@
+<section class="portfolio-area section-gap" id="portfolio">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content col-lg-10">
+                <div class="title text-center">
+                    <h1 class="mb-10">{{'Parcours et expériences professionnelles'|trans}}</h1>
+                    <p>{{'Défilez les onglets pour découvrir mon parcours du développeur web'|trans ~ ' ;)'}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="filters">
+            <ul>
+{#                <li class="active" data-filter="*">{{ 'Global'|trans }}</li>#}
+                <li class="active" data-filter=".experience">{{ 'Expériences'|trans }}</li>
+                <li data-filter=".formation">{{ 'Formations'|trans }}</li>
+                <li data-filter=".leisure">{{ 'Centre d\'inérêt'|trans }}</li>
+            </ul>
+        </div>
+        <div class="filters-content">
+            <div class="row grid">
+                {% if experiences is defined and experiences is not empty %}
+                    {% set lastThirdExp = experiences|slice(0, 3) %}
+                    {% for lastThirdEx in lastThirdExp %}
+                        {% if lastThirdEx is not empty  %}
+                        <div class="single-portfolio col-sm-4 all {{ lastThirdEx is not empty ? lastThirdEx.classType : 'experience' }}"
+                                {{ lastThirdEx.showStatus == false ? "style='display: none'" : '' }}>
+                            <div class="item">
+{#                                <img src="img/p1.jpg" alt="Work 1">#}
+                                <div class="w-100" style="{{ lastThirdEx.cssCard is not empty ? lastThirdEx.cssCard : '' }}">
+                                    {{ lastThirdEx.description is not empty ? lastThirdEx.description|raw : '' }}
+                                </div>
+                                <div class="p-inner">
+                                    <h4>{{ lastThirdEx is not empty ? lastThirdEx.label|raw : '' }}</h4>
+                                    <div class="cat">
+                                        {{ lastThirdEx is not empty ? lastThirdEx.classType|raw : 'Experience' }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+                {% if formations is defined and formations is not empty %}
+                    {% set lastThirdForm = formations|slice(0, 3) %}
+                    {% for lastThirdF in lastThirdForm %}
+                        {% if lastThirdF.cssCard is not empty %}
+                        <div class="single-portfolio col-sm-4 all {{ lastThirdF.classType is not empty ? lastThirdF.classType : 'formation' }}"
+                                {{ lastThirdF.showStatus == false ? "style='display: none'" : '' }}>
+                            <div class="item">
+                                <div class="w-100" style="{{ lastThirdF.cssCard is not empty ? lastThirdF.cssCard|raw : '' }}">
+                                    {{ lastThirdF.description is not empty ? lastThirdF.description|raw : '' }}
+                                </div>
+                                <div class="p-inner">
+                                    <h4>{{ lastThirdF is not empty ? lastThirdF.label|trans|raw : '' }}</h4>
+                                    <div class="cat">
+                                        {{ lastThirdF is not empty ? lastThirdF.classType|trans|raw : 'Formation' }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+                {% if leisure is defined and leisure is not empty %}
+                    {% set lastThirdLeisure = leisure|slice(0, 3) %}
+                    {% for lastThirdL in lastThirdLeisure %}
+                        {% if lastThirdL.cssCard is not empty %}
+                        <div class="single-portfolio col-sm-4 all {{ lastThirdL is not empty ? lastThirdL.classType : 'leisure' }}"
+                                {{ lastThirdL.showStatus == 0 ? "style='display: none'" : '' }}>
+                            <div class="item">
+                                <div class="w-100" style="{{ lastThirdL.cssCard is not empty ? lastThirdL.cssCard|raw : '' }}">
+                                    {{ lastThirdL.description is not empty ? lastThirdL.description|raw : '' }}
+                                </div>
+                                <div class="p-inner">
+                                    <h4>{{ lastThirdL is not empty ? lastThirdL.label|trans|raw : '' }}</h4>
+                                    <div class="cat">
+                                        {{ lastThirdL is not empty ? lastThirdL.classType|trans|raw : 'Leisure' }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

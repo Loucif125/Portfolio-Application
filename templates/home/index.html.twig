@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{'Profil | Loucif KHABACHE'|trans}}
+{% endblock %}
+
+{% block body %}
+    <div class="protfolio-wrap">
+        <!-- Header Portfolio App -->
+        {% include 'Includes/header.html.twig' %}
+
+        <!-- Banner Portfolio App -->
+        {% include 'Includes/bannerHome.html.twig' %}
+        
+        <!-- Content Portfolio App -->
+        {% include 'Includes/contentHome.html.twig' %}
+
+        <!-- Service Portfolio App -->
+        {% include 'Includes/servicesHeader.html.twig' %}
+
+        <!-- Services Portfolio App -->
+        {% include 'Includes/servicesCard.html.twig' %}
+
+        <!-- Skill Portfolio App -->
+        {% include 'Includes/skills.html.twig' %}
+
+        <!-- Footer Portfolio App -->
+        {% include 'Includes/footer.html.twig' %}
+    </div>
+{% endblock %}

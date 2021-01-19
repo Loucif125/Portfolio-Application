@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    {% if users is defined and users is not empty %}
+        {% for element in users %}
+            <url>
+                {% if element.name is not empty %}
+                    <loc>{{ url('home') ~ '#home' }}</loc>
+                {% endif %}
+                {% if element.updatedAt is not empty %}
+                    <lastmod>{{ element.updatedAt|date("Y/m/d") }}</lastmod>
+                {% endif %}
+                <changefreq>daily</changefreq>
+                <priority>0.8</priority>
+            </url>
+        {% endfor %}
+    {% endif %}
+
+    {% if contacts is defined and contacts is not empty %}
+        {% for element in contacts %}
+            <url>
+                {% if element.name is not empty %}
+                    <loc>{{ url('home') ~ '#contact-me' }}</loc>
+                {% endif %}
+                {% if element.updatedAt is not empty %}
+                    <lastmod>{{ element.updatedAt|date("Y/m/d") }}</lastmod>
+                {% endif %}
+                <changefreq>daily</changefreq>
+                <priority>0.8</priority>
+            </url>
+        {% endfor %}
+    {% endif %}
+
+    {% if activities is defined and activities is not empty %}
+        {% for element in activities %}
+            <url>
+                {% if element.name is not empty %}
+                    <loc>{{ url('home') ~ '#activity' }}</loc>
+                {% endif %}
+                {% if element.updatedAt is not empty %}
+                    <lastmod>{{ element.updatedAt|date("Y/m/d") }}</lastmod>
+                {% endif %}
+                <changefreq>daily</changefreq>
+                <priority>0.8</priority>
+            </url>
+        {% endfor %}
+    {% endif %}
+
+    {% if experiences is defined and experiences is not empty %}
+        {% for element in experiences %}
+            <url>
+                {% if element.name is not empty %}
+                    <loc>{{ url('home') ~ '#portfolio' }}</loc>
+                {% endif %}
+                {% if element.updatedAt is not empty %}
+                    <lastmod>{{ element.updatedAt|date("Y/m/d") }}</lastmod>
+                {% endif %}
+                <changefreq>daily</changefreq>
+                <priority>0.8</priority>
+            </url>
+        {% endfor %}
+    {% endif %}
+
+    {% if formations is defined and formations is not empty %}
+        {% for element in formations %}
+            <url>
+                {% if element.name is not empty %}
+                    <loc>{{ url('home') }}</loc>
+                {% endif %}
+                {% if element.updatedAt is not empty %}
+                    <lastmod>{{ element.updatedAt|date("Y/m/d") }}</lastmod>
+                {% endif %}
+                <changefreq>daily</changefreq>
+                <priority>0.8</priority>
+            </url>
+        {% endfor %}
+    {% endif %}
+</urlset>

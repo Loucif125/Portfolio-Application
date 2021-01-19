@@ -1,0 +1,20 @@
+<section class="services-area pb-60">
+    <div class="container">
+        <div class="row">
+            {% if activities is defined and activities is not empty %}
+                {% for activity in activities %}
+                    {% set urlImg = 'img/' ~ (activity.nameImg is not empty ? activity.nameImg : 'c1.png') %}
+                    <div class="col-lg-4">
+                        <div class="single-service">
+                            <img class="img-fluid" src="{{ asset(urlImg)}}" alt="{{ activity.label is not empty ? activity.label|trans : 'Activité'|trans}}">
+                            <h4>{{ activity.label is not empty ? activity.label|trans : 'Activité'|trans}}</h4>
+                            <p>
+                                {{ activity.description is not empty ? activity.description|trans : '' }}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>

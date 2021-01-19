@@ -1,0 +1,13 @@
+
+.idea/
+
+var/
+.env
+###> symfony/webpack-encore-pack ###
+/node_modules/
+
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-pack ###
+
+composer.lock

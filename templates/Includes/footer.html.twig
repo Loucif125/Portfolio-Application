@@ -1,0 +1,66 @@
+<footer class="footer-area section-gap" id="contact-me">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6>{{ 'A propos de moi'|trans }}</h6>
+                    {% if footers is defined and footers is not empty %}
+                        {% set footer = footers|first %}
+                        <p>{{ footer.description is not empty ? footer.description|trans|raw : 'Concepteur et Développeur web'|trans }}</p>
+                    {% endif %}
+                    {% if users|first.adress is defined and users|first.adress is not empty %}
+                        <i class="fa fa-map-marker"></i> {{ users|first.adress|raw }}
+                    {% endif %}
+                    <p class="footer-text">
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5  col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6>{{ 'Me contacter ?'|trans}}</h6>
+                    {% if footers is defined and footers is not empty %}
+                        {% set footer = footers|first %}
+                        <p>{{ footer.subDescription is not empty ? footer.subDescription|trans|raw : "N'hésite pas à me contacter pour toutes questions ;)"|trans }}</p>
+                    {% endif %}
+                    <div class="form-inline" id="mc_embed_signup">
+                        {%  form_theme form 'bootstrap_4_layout.html.twig' %}
+                        {{ form_start(form) }}
+                            {{ form_widget(form.email, { 'attr' : {'placeholder': 'Email *'}}) }}
+                            {{ form_widget(form.message, { 'attr' :{
+                                'style': 'background-color: #202020; border: 0',
+                                'class': 'w-50 mt-10',
+                                'placeholder': 'Votre message...' }})
+                            }}
+                            <button class="click-btn btn btn-default w-25 mt-10" type="submit">
+                                <i class="fa fa-send" aria-hidden="true"> {{ 'Envoyer'|trans }}</i>
+                            </button>
+                            {# Recaptcha Google #}
+                            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                            <div class="g-recaptcha" data-sitekey="6LdCs6gZAAAAABNHIecBEDRzqr3Q9OO5srSKYb9f"></div>
+                        {{ form_widget(form._token) }}
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+                <div class="single-footer-widget">
+                    <h6>{{ 'Trouve-moi'|trans }}</h6>
+                    <p>{{'Sur les réseaux sociaux'|trans}}</p>
+                    <div class="footer-social d-flex align-items-center">
+                        {% if contacts is defined and contacts is not empty  %}
+                            {% for contact in contacts %}
+                                <a href="{{ contact.link is not empty ? contact.link : '#' }}" title="{{ contact.name is not empty ? contact.name : '#'}}" target="_blank">
+                                    <i class="fa fa-{{ contact.label is not empty ? contact.label : '#'}}"></i>
+                                </a>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if cookiesConfig is defined and cookiesConfig and cookiesContent|first.description is not empty %}
+        {% include 'Includes/cookiesModal.html.twig' with  { 'cookiesContent' : cookiesContent|first.description } %}
+    {% endif %}
+</footer>

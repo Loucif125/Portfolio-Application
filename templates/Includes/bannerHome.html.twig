@@ -1,0 +1,26 @@
+<section class="banner-area relative" id="home">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row fullscreen d-flex align-items-center justify-content-center">
+            <div class="banner-content col-lg-10">
+                <h5 class="text-uppercase">
+                    {% if users is defined and users is not empty %}
+                        {% set user = users|first %}
+                        {{ user.name|length > 0 ? user.name : '' }}
+                        {{ user.familyName|length > 0 ? user.familyName : '' }}
+                    {% endif %}
+                </h5>
+                <h1>
+                    {% if headers is defined and headers is not empty %}
+                        {% set header = headers|first %}
+                        {{ header.title|trans|raw }}
+                    {% else %}
+                        {{'Concepteur Développeur web'|trans}}
+                    {% endif %}
+                </h1>
+                <a href="#" class="primary-btn text-uppercase" id="js-discover-more">{{'Découvrir mon profil :)'|trans}}</a>
+
+            </div>
+        </div>
+    </div>
+</section>

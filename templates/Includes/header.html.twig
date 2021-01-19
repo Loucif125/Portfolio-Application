@@ -1,0 +1,24 @@
+<header class="default-header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url('home') }}">
+                <img src="{{ asset('img/logo.png')}}" alt="{{ 'Loucif KHABACHE' }}">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="text-white lnr lnr-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li><a href="#home">{{'Profil'|trans}}</a></li>
+                    <li><a href="#portfolio">{{'Parcours'|trans}}</a></li>
+                    <li><a href="#service">{{'Activités'|trans}}</a></li>
+                    <li><a href="#testimonial">{{'Compétences'|trans}}</a></li>
+                    <li><a href="#contact-me">{{'Contact'|trans}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>

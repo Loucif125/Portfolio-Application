@@ -1,0 +1,77 @@
+{% if skills is defined and skills is not empty %}
+    {% set sRow1 = skills|slice(0, 2) %}
+    {% set sRow2 = skills|slice(2, 2) %}
+{% endif %}
+<section class="review-area section-gap" id="testimonial">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-60 col-lg-10">
+                <div class="title text-center">
+                    <h1 class="mb-10">{{'Mes compétences Informatiques'|trans}}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                {% for s in sRow1 %}
+                    <div class="single-review">
+                        {% set urlImg = 'img/' ~ (s.nameImg is not empty ? s.nameImg : 'c1.png') %}
+                        <img src="{{ asset(urlImg) }}" alt="{{ s.label is not empty ? s.label|capitalize|trans : '' }}">
+                        <div class="title d-flex flex-row">
+                            <h4>{{ s.label is not empty ? s.label|capitalize|trans : '' }}</h4>
+                            {% if s.level is not empty %}
+                                {% set checkedStar = s.level|number_format %}
+                                {% set uncheckedStar = 5 - checkedStar %}
+                                <div class="star">
+                                    {% if checkedStar == 5 %}
+                                        {% for i in 1..5 %}
+                                            <span class="fa fa-star checked"></span>
+                                        {% endfor %}
+                                    {% else %}
+                                        {% for i in range(1, checkedStar, 1) %}
+                                            <span class="fa fa-star checked"></span>
+                                        {% endfor %}
+                                        {% for i in range(1, uncheckedStar, 1) %}
+                                            <span class="fa fa-star"></span>
+                                        {% endfor %}
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <p>{{ s.description is not empty ? s.description|trans|raw : '' }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-lg-6">
+                {% for s in sRow2 %}
+                    <div class="single-review">
+                        {% set urlImg = 'img/' ~ (s.nameImg is not empty ? s.nameImg : 'c2.png') %}
+                        <img src="{{ asset(urlImg) }}" alt="{{ s.label is not empty ? s.label|capitalize|trans : '' }}">
+                        <div class="title d-flex flex-row">
+                            <h4>{{ s.label is not empty ? s.label|capitalize|trans : '' }}</h4>
+                            {% if s.level is not empty %}
+                                {% set checkedStar = s.level|number_format %}
+                                {% set uncheckedStar = 5 - checkedStar %}
+                                <div class="star">
+                                    {% if checkedStar == 5 %}
+                                        {% for i in 1..5 %}
+                                            <span class="fa fa-star checked"></span>
+                                        {% endfor %}
+                                    {% else %}
+                                        {% for i in range(1, checkedStar, 1) %}
+                                            <span class="fa fa-star checked"></span>
+                                        {% endfor %}
+                                        {% for i in range(1, uncheckedStar, 1) %}
+                                            <span class="fa fa-star"></span>
+                                        {% endfor %}
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <p>{{ s.description is not empty ? s.description|trans|raw : '' }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

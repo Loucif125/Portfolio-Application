@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="google-site-verification" content="JvQQlpJ6zIvlr1rmbHKkU62kr1hAOqfUd2z2pHuURtU" />
+        <meta name="author" content="{{ users is defined and users|length > 0 ? users|first.name ~ ' ' ~ users|first.familyName : '' }}">
+        <meta name="description" content="{{ seo is defined and seo|length > 0 ? seo|first.description : '' }}">
+        <meta name="keywords" content="{{ seo is defined and seo|length > 0 ? seo|first.label : '' }}">
+        <title>{% block title %} Loucif KHABACHE {% endblock %}</title>
+
+        {% block stylesheets %}
+            <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+            <link rel="icon" type="image/png" href="{{ asset('img/logo-browser.png') }}" />
+            <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170095338-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-170095338-1');
+            </script>
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}
+            <script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }}"></script>
+            <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('js/easing.min.js') }}"></script>
+            <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+            <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+            <script src="{{ asset('js/jquery.sticky.js') }}"></script>
+            <script src="{{ asset('js/jquery.nice-select.min.js') }}"></script>
+            <script src="{{ asset('js/parallax.min.js') }}"></script>
+            <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+            <script src="{{ asset('js/main.js') }}"></script>
+            <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+            {# Scroll to contact footer #}
+            <script>
+                $(document).ready(function () {
+                    $("#js-discover-more").click(function() {
+                        $('html, body').animate({
+                            scrollTop: $("#portfolio").offset().top
+                        }, 1000);
+                    });
+                    setTimeout(function() {
+                        $(".filters ul li:first-child").trigger('click');
+                    },5);
+                });
+            </script>
+        {% endblock %}
+    </body>
+</html>
+

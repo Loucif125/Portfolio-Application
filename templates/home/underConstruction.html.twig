@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{'Profil | Loucif KHABACHE'|trans}}
+{% endblock %}
+
+{% block body %}
+    <div class="protfolio-wrap">
+        <!-- Header Portfolio App -->
+        {% include 'Includes/header.html.twig' %}
+
+        <!-- Banner Portfolio App -->
+        <section class="banner-area relative" style="background-image: none; background-color: #212529" id="home">
+            <div class="overlay overlay-bg"></div>
+            <div class="container">
+                <div class="row fullscreen d-flex align-items-center justify-content-center">
+                    <div class="banner-content col-lg-10">
+                        <h5 class="text-uppercase">
+                            {% if users is defined and users is not empty %}
+                                {% set user = users|first %}
+                                {{ user.name|length > 0 ? user.name : '' }}
+                                {{ user.familyName|length > 0 ? user.familyName : '' }}
+                            {% endif %}
+                        </h5>
+                        <h1>
+                           SITE <br>EN CONSTRUCTION ;)
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="height: 100px">
+            <span style="color: #fff">{{ "Disponible très bientôt"|trans}}</span>
+        </div>
+        <!-- Footer Portfolio App -->
+        {% include 'Includes/footer.html.twig' %}
+    </div>
+{% endblock %}

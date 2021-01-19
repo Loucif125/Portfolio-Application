@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="tgLD0aw" resname="Profil | Loucif KHABACHE">
+        <source>Profil | Loucif KHABACHE</source>
+        <target>__Profil | Loucif KHABACHE</target>
+      </trans-unit>
+      <trans-unit id="iLss4ac" resname="Concepteur Développeur web">
+        <source>Concepteur Développeur web</source>
+        <target>__Concepteur Développeur web</target>
+      </trans-unit>
+      <trans-unit id="F31keKc" resname="Découvrir mon profil">
+        <source>Découvrir mon profil</source>
+        <target>__Découvrir mon profil</target>
+      </trans-unit>
+      <trans-unit id="koawVtU" resname="Parcours et expériences professionnelles">
+        <source>Parcours et expériences professionnelles</source>
+        <target>__Parcours et expériences professionnelles</target>
+      </trans-unit>
+      <trans-unit id="RM6pYOS" resname="Défilez les onglets pour découvrir mon parcours du développeur web">
+        <source>Défilez les onglets pour découvrir mon parcours du développeur web</source>
+        <target>__Défilez les onglets pour découvrir mon parcours du développeur web</target>
+      </trans-unit>
+      <trans-unit id="DTtmY56" resname="Expériences">
+        <source>Expériences</source>
+        <target>__Expériences</target>
+      </trans-unit>
+      <trans-unit id="_8e_aDo" resname="Formations">
+        <source>Formations</source>
+        <target>__Formations</target>
+      </trans-unit>
+      <trans-unit id="hcD8YmZ" resname="Centre d'inérêt">
+        <source>Centre d'inérêt</source>
+        <target>__Centre d'inérêt</target>
+      </trans-unit>
+      <trans-unit id="NdJc89J" resname="A propos de moi">
+        <source>A propos de moi</source>
+        <target>__A propos de moi</target>
+      </trans-unit>
+      <trans-unit id="Y4lzEUh" resname="Concepteur et Développeur web">
+        <source>Concepteur et Développeur web</source>
+        <target>__Concepteur et Développeur web</target>
+      </trans-unit>
+      <trans-unit id="ASmAu9H" resname="Me contacter ?">
+        <source>Me contacter ?</source>
+        <target>__Me contacter ?</target>
+      </trans-unit>
+      <trans-unit id="XlPST8i" resname="N'hésite pas à me contacter pour toutes questions ;)">
+        <source>N'hésite pas à me contacter pour toutes questions ;)</source>
+        <target>__N'hésite pas à me contacter pour toutes questions ;)</target>
+      </trans-unit>
+      <trans-unit id="eQdSCfK" resname="Envoyer">
+        <source>Envoyer</source>
+        <target>__Envoyer</target>
+      </trans-unit>
+      <trans-unit id="i9ob9hq" resname="Trouve-moi">
+        <source>Trouve-moi</source>
+        <target>__Trouve-moi</target>
+      </trans-unit>
+      <trans-unit id="8b2i8NV" resname="Sur les réseaux sociaux">
+        <source>Sur les réseaux sociaux</source>
+        <target>__Sur les réseaux sociaux</target>
+      </trans-unit>
+      <trans-unit id="4mfTQ4I" resname="Profil">
+        <source>Profil</source>
+        <target>__Profil</target>
+      </trans-unit>
+      <trans-unit id="yIgo01y" resname="Parcours">
+        <source>Parcours</source>
+        <target>__Parcours</target>
+      </trans-unit>
+      <trans-unit id="j7gQXcQ" resname="Activités">
+        <source>Activités</source>
+        <target>__Activités</target>
+      </trans-unit>
+      <trans-unit id="QTkjKFo" resname="Compétences">
+        <source>Compétences</source>
+        <target>__Compétences</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>__Contact</target>
+      </trans-unit>
+      <trans-unit id="ayuPG4D" resname="Activité">
+        <source>Activité</source>
+        <target>__Activité</target>
+      </trans-unit>
+      <trans-unit id="lH0seH8" resname="Mes compétences Informatiques">
+        <source>Mes compétences Informatiques</source>
+        <target>__Mes compétences Informatiques</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
